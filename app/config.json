@@ -1,0 +1,293 @@
+{  
+    "app"			: "ANEX | DASHBOARD",
+    "name"			: "ANEX | DASHBOARD",
+    "version"		: "0.1.0 alpha",
+    "logo"			: "app/assets/images/icon-40.png",
+    "style"			: "default",
+    "footer"		: "ANEX Dashboard - 2016",
+    "pages"			: "contents",
+    "links"			: [
+		{
+			"name"		: "ANEX ACCESS",
+			"url"		: "//access.anex.at",
+			"preview"	: "content/images/cover-access.png",
+			"group"		: "Management"
+		},
+		{
+			"name"		: "Helpscout",
+			"url"		: "//secure.helpscout.net/",
+			"preview"	: "content/images/cover-helpscout.png",
+			"group"		: "Management, Administration"
+		},
+		{
+			"name"		: "Hosteurope",
+			"url"		: "//kis.hosteurope.de",
+			"preview"	: "content/images/cover-hosteurope.png",
+			"group"		: "Management, Administration"
+		},
+		{
+			"name"		: "Salesking",
+			"url"		: "//anex.salesking.eu",
+			"preview"	: "content/images/cover-salesking.png",
+			"group"		: "Management, Finance"
+		},
+		{
+			"name"		: "InternetX - AutoDNS",
+			"url"		: "//login.autodns.com",
+			"preview"	: "content/images/cover-internetx-autodns.png",
+			"group"		: "Management, Administration"
+		},
+		{
+			"name"		: "InternetX - SSLManager",
+			"url"		: "//login.sslmanager.de",
+			"preview"	: "content/images/cover-internetx-sslmanager.png",
+			"group"		: "Management, Administration"
+		},
+		{
+			"name"		: "Raiffeisen",
+			"url"		: "//banking.raiffeisen.at/logincenter/",
+			"preview"	: "content/images/cover-raiffeisen.png",
+			"group"		: "Management, Finance"
+		},
+		{
+			"name"		: "Holvi",
+			"url"		: "//holvi.com/login/",
+			"preview"	: "content/images/cover-holvi.png",
+			"group"		: "Management, Finance"
+		},
+		{
+			"name"		: "Paypal",
+			"url"		: "//paypal.com/",
+			"preview"	: "content/images/cover-paypal.png",
+			"group"		: "Management, Finance"
+		}
+	],
+	"content" : {
+		"projects" : [
+			{
+				"name"		: "Joe Hana",
+				"preview"	: "http://joehana.com",
+				"group"		: "Websites",
+				"links"		: [
+					{
+						"name"	: "Site",
+						"url"	: "//joehana.com"
+					},
+					{
+						"name"	: "Admin",
+						"url"	: "//joehana.com/wp-admin"
+					}
+				]
+			},
+			{
+				"name"		: "ANEX",
+				"preview"	: "http://anex.at",
+				"group"		: "Websites",
+				"links"		: [
+					{
+						"name"	: "Site",
+						"url"	: "//anex.at"
+					},
+					{
+						"name"	: "Admin",
+						"url"	: "//anex.at/wp-admin"
+					}
+				]
+			},
+			{
+				"name"		: "Kolarik",
+				"preview"	: "https://kolarik.at",
+				"group"		: "Websites",
+				"links"		: [
+					{
+						"name"	: "DEV",
+						"url"	: "//projects.anex.at/kolarik/dev/site/"
+					},
+					{
+						"name"	: "Admin",
+						"url"	: "//projects.anex.at/kolarik/dev/site/wp-admin"
+					},
+					{
+						"name"	: "Live",
+						"url"	: "//kolarik.at"
+					},
+					{
+						"name"	: "Admin",
+						"url"	: "//kolarik.at/wp-admin"
+					}
+				]
+			},
+			{
+				"name"		: "Koki",
+				"preview"	: "http://kids.kolarik.at",
+				"group"		: "Websites",
+				"links"		: [
+					{
+						"name"	: "Live",
+						"url"	: "//kids.kolarik.at"
+					},
+					{
+						"name"	: "Admin",
+						"url"	: "//kids.kolarik.at/wp-admin"
+					}
+				]
+			},
+			{
+				"name"		: "Sensation Ocean",
+				"preview"	: "http://sensation-ocean.at",
+				"group"		: "Websites",
+				"links"		: [
+					{
+						"name"	: "DEV",
+						"url"	: "//projects.anex.at/sensation/dev/site/"
+					},
+					{
+						"name"	: "Admin",
+						"url"	: "//projects.anex.at/sensation/dev/site/wp-admin"
+					},
+					{
+						"name"	: "Live",
+						"url"	: "//sensation-ocean.at"
+					},
+					{
+						"name"	: "Admin",
+						"url"	: "//sensation-ocean.at/wp-admin"
+					}
+				]
+			},
+			{
+				"name"		: "WPCasa",
+				"preview"	: "http://wpsight.anex.at/dev/wpcasa/",
+				"group"		: "Websites",
+				"links"		: [
+					{
+						"name"	: "Site",
+						"url"	: "//wpsight.anex.at/dev/wpcasa/"
+					},
+					{
+						"name"	: "Admin",
+						"url"	: "//wpsight.anex.at/dev/wpcasa/wp-admin"
+					}
+				]
+			}
+		]
+	},
+    "components" : [  
+        {  
+            "name":"Apache",
+            "version":"2.2.31"
+        },
+        {  
+            "name":"Nginx",
+            "version":"1.11.0"
+        },
+        {  
+            "name":"MySQL",
+            "version":"5.5.49"
+        },
+        {  
+            "name":"PHP",
+            "version":"5.3.23 - 7.0.9"
+        },
+        {  
+            "name":"OpenSSL",
+            "version":"1.0.2h"
+        },
+        {  
+            "name":"APC",
+            "version":"3.1.13"
+        },
+        {  
+            "name":"APCu",
+            "version":"4.0.7 & 5.1.5"
+        },
+        {  
+            "name":"eAccelerator",
+            "version":"1.0"
+        },
+        {  
+            "name":"XCache",
+            "version":"3.2.0"
+        },
+        {  
+            "name":"OPCache",
+            "version":"7.0.4"
+        },
+        {  
+            "name":"XDebug",
+            "version":"2.4.0"
+        },
+        {  
+            "name":"Python",
+            "version":"2.7.6"
+        },
+        {  
+            "name":"mod_wsgi",
+            "version":"3.4.0"
+        },
+        {  
+            "name":"Perl",
+            "version":"5.16.1"
+        },
+        {  
+            "name":"mod_perl",
+            "version":"2.0.8"
+        },
+        {  
+            "name":"phpMyAdmin",
+            "version":"4.4.15.5"
+        },
+        {  
+            "name":"SQLiteManager",
+            "version":"1.2.4"
+        },
+        {  
+            "name":"phpLiteAdmin",
+            "version":"1.9.4.1"
+        },
+        {  
+            "name":"Freetype",
+            "version":"2.4.10"
+        },
+        {  
+            "name":"curl",
+            "version":"7.36.0"
+        },
+        {  
+            "name":"libpng",
+            "version":"1.5.18"
+        },
+        {  
+            "name":"ImageMagick",
+            "version":"6.8.9-1"
+        },
+        {  
+            "name":"Imagick",
+            "version":"3.4.2"
+        },
+        {  
+            "name":"gd",
+            "version":"2.1.0"
+        },
+        {  
+            "name":"zlib",
+            "version":"1.2.8"
+        },
+        {  
+            "name":"libxml2",
+            "version":"2.9.1"
+        },
+        {  
+            "name":"gettext",
+            "version":"0.18.1.1"
+        },
+        {  
+            "name":"iconv",
+            "version":"1.14"
+        },
+        {  
+            "name":"mcrypt",
+            "version":"2.5.8"
+        }
+    ]
+}

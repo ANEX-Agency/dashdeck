@@ -1,0 +1,213 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    font-family: 'Open Sans';
+    color: #555;
+}
+
+html, body {
+    background: #0e95c7;
+    background: #404040;
+}
+
+iframe {
+    width: 100%;
+    height: calc(100vh - 94px);
+}
+
+table {
+	text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background: #F1F1F1;
+}
+
+td, th {
+    padding: 3px;
+    border: 1px solid #E1E2E2;
+    text-align: left;
+    vertical-align: top;
+}
+
+a {
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+}
+
+img {
+	opacity: 1;
+	transition: opacity .5s;
+}
+
+img[data-src] {
+	opacity: 0;
+}
+
+.container {padding: 3em;}
+
+/* HEADER
+-------------------------------------------------- */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: #111;
+    box-shadow: 0 0 20px rgba( 0, 0, 0, .1 );
+}
+
+/* MAIN
+-------------------------------------------------- */
+.site-main {
+    padding: 60px 0 34px;
+}
+
+.site-main .uk-container {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    background: #FFF;
+    box-shadow: 0 0 20px rgba( 0, 0, 0, .1 );
+}
+
+/* FOOTER
+-------------------------------------------------- */
+.site-footer {
+    width: 100%;
+    background: #111;
+    box-shadow: 0 0 20px rgba( 0, 0, 0, .1 );
+}
+
+.site-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.site-footer .copyright {
+    padding: .5em 0;
+    color: #EEE;
+    text-align: center;
+}
+
+/* NAVBAR
+-------------------------------------------------- */
+
+.uk-navbar {
+    color: #EEE;
+    background: none;
+}
+
+.uk-navbar-nav>li>a {
+    height: 60px;
+    padding: 0 15px;
+    line-height: 60px;
+    color: #EEE;
+    font-size: 14px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+}
+
+.uk-navbar-nav>li:first-child:hover>a,
+.uk-navbar-nav>li.uk-active:first-child>a {
+    background-color: #00a8e6;
+    color: #EEE;
+}
+
+.uk-navbar-nav>li>a[href='#'] {
+    cursor: pointer;
+}
+
+.site-header .uk-subnav {
+    margin: 7px 20px 0 0;
+}
+.site-header .uk-subnav > * > * {
+    color: #777;
+}
+.site-header .uk-subnav .uk-active a {
+    color: #EEE;
+}
+/* OVERLAY
+-------------------------------------------------- */
+
+.uk-overlay-panel > div {width: 100%; padding: 1em;}
+.uk-overlay {height: 200px;}
+.uk-overlay img {}
+
+/* SPINNER
+-------------------------------------------------- */
+.spinner {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: calc(50% - 20px);
+    z-index: -1;
+    margin: 100px auto;
+    background-color: #333;
+    
+    border-radius: 100%;  
+    -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+    animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+    0%		{-webkit-transform: scale(0)}
+    100%	{-webkit-transform: scale(1.0); opacity: 0;}
+}
+
+@keyframes sk-scaleout {
+    0%		{-webkit-transform: scale(0); transform: scale(0);}
+    100%	{-webkit-transform: scale(1.0); transform: scale(1.0); opacity: 0;}
+}
+
+/* SCROLLBAR
+-------------------------------------------------- */
+::-webkit-scrollbar {
+	width: 0;
+	height: 5px;
+	background-color: #333;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+	height: 0;
+	display: block;
+	background-color: #111;
+}
+
+::-webkit-scrollbar-track-piece {
+	background-color: #111;
+}
+
+::-webkit-scrollbar-track-piece {
+	background-color: #222;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color: #444 !important;
+}
