@@ -100,7 +100,7 @@
 				"group"		: "Websites",
 				"links"		: [
 					{
-						"name"	: "DEV",
+						"name"	: "Dev",
 						"url"	: "//projects.anex.at/kolarik/dev/site/"
 					},
 					{
@@ -138,7 +138,7 @@
 				"group"		: "Websites",
 				"links"		: [
 					{
-						"name"	: "DEV",
+						"name"	: "Dev",
 						"url"	: "//projects.anex.at/sensation/dev/site/"
 					},
 					{
