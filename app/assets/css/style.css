@@ -14,7 +14,7 @@ body {
 
 html, body {
     background: #0e95c7;
-    background: #404040;
+    background: #202020;
 }
 
 iframe {
@@ -155,8 +155,8 @@ img[data-src] {
 -------------------------------------------------- */
 
 .uk-overlay-panel > div {width: 100%; padding: 1em;}
-.uk-overlay {height: 200px;}
-.uk-overlay img {}
+.uk-overlay {width: 100%;}
+.uk-overlay img {width: 100%;}
 
 /* SPINNER
 -------------------------------------------------- */
