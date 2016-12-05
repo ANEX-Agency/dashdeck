@@ -1,12 +1,12 @@
 <?php
 
-//if( !function_exists('json_decode') ) {
-// 	include_once(dirname(__FILE__)."/JSON.php");
-//    function json_decode($data) {
-//        $json = new Services_JSON();
-//        return( $json->decode($data) );
-//    }
-//}
+if( !function_exists('json_decode') ) {
+ 	include_once(dirname(__FILE__)."/JSON.php");
+    function json_decode($data) {
+        $json = new Services_JSON();
+        return( $json->decode($data) );
+    }
+}
 
 // available Languages
 $arr_languages = (array) array('en', 'de', 'it', 'jp', 'ru', 'es', 'fr');
