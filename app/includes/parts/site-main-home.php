@@ -8,7 +8,7 @@
             
                 <h2><?php echo tr( 'Quicklinks' ); ?></h2>
                 
-                <div class="uk-margin" data-uk-slideset="{default: 4, small: 2, medium: 3, large: 4, xlarge: 6, animation: 'scale', duration: 200}">
+                <div class="uk-margin" data-uk-slideset="{default: 2, small: 2, medium: 3, large: 4, xlarge: 6, animation: 'scale', duration: 200}">
                     <div class="uk-slidenav-position uk-margin">
                         <ul class="uk-slideset uk-grid uk-flex-center">
                             <?php foreach( get_links() as $link ) { ?>

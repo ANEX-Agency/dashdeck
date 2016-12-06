@@ -2,8 +2,8 @@
 
     <ul class="uk-navbar-nav uk-hidden-small">
     
-        <li<?php if($page=="home") { ?> class="uk-active"<?php } ?>><a href="index.php?language=<?php echo $language; ?>"><img src="app/content/images/icon.png"></a></li>
-        <li<?php if($page=="projects") { ?> class="uk-active"<?php } ?>><a href="index.php?page=projects&amp;language=<?php echo $language; ?>"><?php echo tr( "Projects" ); ?></a></li>
+        <li<?php if($page=="home") { ?> class="uk-active"<?php } ?>><a href="index.php"><img class="logo" src="<?php echo get_config()->logo; ?>"></a></li>
+        <li<?php if($page=="projects") { ?> class="uk-active"<?php } ?>><a href="index.php?page=projects"><?php echo tr( "Projects" ); ?></a></li>
         
         <li class="uk-parent" data-uk-dropdown>
             
@@ -12,7 +12,7 @@
             <div class="uk-dropdown uk-dropdown-navbar">
                 <ul class="uk-nav uk-nav-navbar">
                 
-                    <li<?php if($page=="phpinfo") { ?> class="uk-active"<?php } ?>><a href="index.php?language=<?php echo $language; ?>&amp;page=phpinfo">phpInfo</a></li>
+                    <li<?php if($page=="phpinfo") { ?> class="uk-active"<?php } ?>><a href="index.php?page=phpinfo">phpInfo</a></li>
                     
                 </ul>
             </div>

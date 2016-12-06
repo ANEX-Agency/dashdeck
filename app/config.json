@@ -1,10 +1,10 @@
 {  
-    "app"			: "ANEX | DASHBOARD",
-    "name"			: "ANEX | DASHBOARD",
-    "version"		: "0.1.0 alpha",
-    "logo"			: "app/assets/images/icon-40.png",
+    "app"			: "DashKit",
+    "name"			: "DashKit",
+    "version"		: "0.2.0 alpha",
+    "logo"			: "app/content/images/logo.png",
     "style"			: "default",
-    "footer"		: "ANEX Dashboard - 2016",
+    "footer"		: "&copy; DashKit",
     "pages"			: "contents",
     "links"			: [
 		{
