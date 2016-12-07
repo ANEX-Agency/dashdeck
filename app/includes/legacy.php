@@ -35,44 +35,44 @@ if ($page == "phpinfo") {
 }
 
 // reset update flag
-file_put_contents('feed/needsUpdate.txt', "0");
+//file_put_contents('feed/needsUpdate.txt', "0");
 
 
 // read config file and create config object
-$config = @file_get_contents(dirname(__FILE__) . "/../conf.json");
-$configObject = $config ? json_decode($config) : null;
+//$config = @file_get_contents(dirname(__FILE__) . "/../conf.json");
+//$configObject = $config ? json_decode($config) : null;
 
 // prepare for sqlite manager
-$arr_sqllite_manager_languages = (array) array('French' => '1', 'English' => '2', 'German' => '4', 'Japanese' => '5', 'Italian' => '6', 'Spanish' => '10');
-setCookie('SQLiteManager_currentLangue', $arr_sqllite_manager_languages[$language], NULL, '/');
+//$arr_sqllite_manager_languages = (array) array('French' => '1', 'English' => '2', 'German' => '4', 'Japanese' => '5', 'Italian' => '6', 'Spanish' => '10');
+//setCookie('SQLiteManager_currentLangue', $arr_sqllite_manager_languages[$language], NULL, '/');
 
 function iFrame($url) {
     print '<iframe src="' . $url . '"></iframe>';
 }
 
-function downloadFeed() {
- 
-    global $language, $configObject;
-    $filename = "home.json";
-    $phpPath = getPHPCLIPath();
-    $phpScriptPath = realpath(dirname(__FILE__) . "/../feed/fetchFeed.php");
-    
-	if(strtoupper(substr(PHP_OS, 0, 3)) === 'WIN')
-	{
-		$cmd = $phpPath . ' "' . $phpScriptPath . '" ' . $configObject->app . " $language $filename > nil &";
-	}
-	else
-	{
-		$cmd = $phpPath . ' "' . $phpScriptPath . '" ' . $configObject->app . " $language $filename > /dev/null &";
-	}
-    
-	$output = array();
-    $exit = 0;
-
-    exec($cmd, $output, $exit);
-	
-    return $exit == 0;
-}
+//function downloadFeed() {
+// 
+//    global $language, $configObject;
+//    $filename = "home.json";
+//    $phpPath = getPHPCLIPath();
+//    $phpScriptPath = realpath(dirname(__FILE__) . "/../feed/fetchFeed.php");
+//    
+//	if(strtoupper(substr(PHP_OS, 0, 3)) === 'WIN')
+//	{
+//		$cmd = $phpPath . ' "' . $phpScriptPath . '" ' . $configObject->app . " $language $filename > nil &";
+//	}
+//	else
+//	{
+//		$cmd = $phpPath . ' "' . $phpScriptPath . '" ' . $configObject->app . " $language $filename > /dev/null &";
+//	}
+//    
+//	$output = array();
+//    $exit = 0;
+//
+//    exec($cmd, $output, $exit);
+//	
+//    return $exit == 0;
+//}
 
 function tr($englishText) {
     $learn = false;  // set to true to generate a json file with the strings of a page. At the end of the page you have to insert  write_tr();
@@ -181,79 +181,79 @@ function getPHPCLIPath() {
     return $execpath;
 }
 
-function getFeed() {
-    global $language;
-    $feedName = "home.json";
-    $feedPath = 'feed/' . $language . '/' . $feedName;
-    $feed = null;
-    $path = realpath(dirname(__FILE__) . "/../" . $feedPath);
-    if (file_exists($path)) {
-        $json = file_get_contents($path);
-        $feed = json_decode($json);
-    }
-    return $feed;
-}
-
-function createItemsForCarouselFromFeedObject($feed) {
-    global $configObject;
-    $items = array();
-    if (isset($feed->carousel)) {
-        foreach ($feed->carousel->all as $item) {
-            $items[] = $item;
-        }
-        if (!is_bought()) {
-            foreach ($feed->carousel->buy as $item) {
-                $items[] = $item;
-            }
-        }
-        $parts = explode(".", $feed->currentVersion);
-
-        if (isset($parts[0])) {
-            $majorversion = $parts[0];
-            $currVer = $configObject->version;
-            $parts = explode(".", $currVer);
-            if (isset($parts[0])) {
-                $majorversionCurrent = $parts[0];
-                if (abs($majorversion) > abs($majorversionCurrent)) {
-                    foreach ($feed->carousel->upgrade as $item) {
-                        $items[] = $item;
-                    }
-                }
-            }
-        }
-    }
-    return $items;
-}
+//function getFeed() {
+//    global $language;
+//    $feedName = "home.json";
+//    $feedPath = 'feed/' . $language . '/' . $feedName;
+//    $feed = null;
+//    $path = realpath(dirname(__FILE__) . "/../" . $feedPath);
+//    if (file_exists($path)) {
+//        $json = file_get_contents($path);
+//        $feed = json_decode($json);
+//    }
+//    return $feed;
+//}
+//
+//function createItemsForCarouselFromFeedObject($feed) {
+//    global $configObject;
+//    $items = array();
+//    if (isset($feed->carousel)) {
+//        foreach ($feed->carousel->all as $item) {
+//            $items[] = $item;
+//        }
+//        if (!is_bought()) {
+//            foreach ($feed->carousel->buy as $item) {
+//                $items[] = $item;
+//            }
+//        }
+//        $parts = explode(".", $feed->currentVersion);
+//
+//        if (isset($parts[0])) {
+//            $majorversion = $parts[0];
+//            $currVer = $configObject->version;
+//            $parts = explode(".", $currVer);
+//            if (isset($parts[0])) {
+//                $majorversionCurrent = $parts[0];
+//                if (abs($majorversion) > abs($majorversionCurrent)) {
+//                    foreach ($feed->carousel->upgrade as $item) {
+//                        $items[] = $item;
+//                    }
+//                }
+//            }
+//        }
+//    }
+//    return $items;
+//}
 
 // checks if user has bought mamp
-function is_bought() {
-    global $configObject;
-    if ($configObject->app == "MAMP") {
-        return false;
-    }
-    $i_bought = false;
-    if (file_exists(dirname(__FILE__) . '/../bought')) {
-        $i_bought = (int) file_get_contents(dirname(__FILE__) . '/../bought');
-    }
-    return $i_bought;
-}
-
-function appName() {
-    global $configObject;
-    return $configObject->app;
-}
+//function is_bought() {
+//    global $configObject;
+//    if ($configObject->app == "MAMP") {
+//        return false;
+//    }
+//    $i_bought = false;
+//    if (file_exists(dirname(__FILE__) . '/../bought')) {
+//        $i_bought = (int) file_get_contents(dirname(__FILE__) . '/../bought');
+//    }
+//    return $i_bought;
+//}
+//
+//function appName() {
+//    global $configObject;
+//    return $configObject->app;
+//}
 
 function a($page) {
     global $language;
     return '<a href="index.php?page=' . $page . '&amp;language=' . $language . '">';
 }
 
-function buyLink()
-{
-	if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-		return "http://www.mamp.info/winstore";
-	} else {
-		return "http://www.mamp.info/macstore";
-	}
-}
+//function buyLink()
+//{
+//	if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+//		return "http://www.mamp.info/winstore";
+//	} else {
+//		return "http://www.mamp.info/macstore";
+//	}
+//}
 
